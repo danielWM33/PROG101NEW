@@ -151,8 +151,10 @@ plot_kefj(coldday_datetime, coldday_temperature, coldday_exposure)
 
 ExTempExTime <- kefj_site == hottest_site & kefj_datetime >= hotday_start & kefj_datetime <= hotday_end & kefj_temperature > 25
 ExTempExTime1 <- kefj_datetime[ExTempExTime]
+# ExTempExTime1 is in 30 minute intervals
 a <- length(ExTempExTime1) / 2
 a
+# a is hours
 
 ExColdTempExTime <- kefj_site == coldest_site & kefj_datetime >= coldday_start & kefj_datetime <= coldday_end & kefj_temperature < -4
 ExColdTempExTime1 <- kefj_datetime[ExColdTempExTime]
