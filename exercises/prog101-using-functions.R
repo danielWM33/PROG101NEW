@@ -2,7 +2,7 @@
 # if necessary.
 log10(100)
 sqrt(4)
-ceiling(2.0)
+ceiling(1.1)
 ?ceiling
 
 # Find the functions for cosine and sine. What are the cosine and sine of 0?

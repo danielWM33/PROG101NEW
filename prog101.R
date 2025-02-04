@@ -46,34 +46,33 @@ plot_kefj()
   # https://docs.google.com/document/d/10JybwClKPq1gLxcjj8XKmpLWhhXrBDVsBg8bJOTYRkg/edit?usp=sharing
 
 kefj_datetime1 <- kefj_datetime[kefj_site == "Aialik"]
-kefj_datetime2 <- kefj_datetime[kefj_site == "Aialik"]
 # above code gives reference vectors for documentation
 
-kefj_datetime3 <- kefj_datetime1[2:length(kefj_datetime1)]
+kefj_datetime2 <- kefj_datetime1[2:length(kefj_datetime1)]
 # above code defines new vector as the reference vectors excpet the first value
 # think of this as shifting down the reference variable by one index
 
-kefj_datetime4 <- kefj_datetime2[1:(length(kefj_datetime1)-1)]
+kefj_datetime3 <- kefj_datetime1[1:(length(kefj_datetime1)-1)]
 # above code defines new vector as the reference vectors except the last value
 # remove last value because we need to make the lengths equal
 
-kefj_datetime5 <- kefj_datetime3 - kefj_datetime4
+kefj_datetimeinterval <- kefj_datetime2 - kefj_datetime3
 # gives time diff
 
-table(kefj_datetime5)
+table(kefj_datetimeinterval)
 #gives the most common values
 
 
 # Problem decomposition ---------------------------------------------------
 
-which.min(kefj_temperature)
-which.max(kefj_temperature)
+mintemp <- which.min(kefj_temperature)
+maxtemp <- which.max(kefj_temperature)
 plot_kefj(kefj_temperature)
 plot_kefj(kefj_temperature)
-kefj_site[158962]
-kefj_site[63809]
-kefj_datetime[158962]
-kefj_datetime[63809]
+kefj_site[mintemp]
+kefj_site[maxtemp]
+kefj_datetime[mintemp]
+kefj_datetime[maxtemp]
 
 # When and where did the hottest and coldest air temperature readings happen?
 # Hottest = Aialik, July 3rd 2018 at 1 pm

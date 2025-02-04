@@ -17,12 +17,15 @@ instrument_recovered_hm <- c(1600, 1920, 2015)
 ?c()
 instrument_recovered <- floor(instrument_recovered_hm) / 100
 instrument_recovered_hdec <- (instrument_recovered_hm %% 100) / 60
-instrument_recovered <- instrument_recovered_h + instrument_recovered_hdec
+instrument_recovered <- instrument_recovered + instrument_recovered_hdec
 
 
 instrument_durations <- instrument_recovered - instrument_deployed
+instrument_durations[2] > instrument_durations[1] & instrument_durations[2] > instrument_durations[3]
+
 
 # Which site had the longest duration? Use conditional indexing.
 site <- c("Santa Cruz", "Santa Rosa", "San Miguel")
+site[2]
 
 #Santa Rosa!

@@ -18,4 +18,4 @@ LETTERS[1:10]
 LETTERS[c(5,10,15)]
 
 # Convert the last ten letters of the alphabet to lower case.
-tolower(LETTERS[16:26])
+tolower(LETTERS[16:length(LETTERS)])
